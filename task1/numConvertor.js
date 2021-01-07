@@ -1,5 +1,5 @@
 const inputValidator = (input) => {
-  const romanRegexp = /^(?=[MDCLXVI])M*D?C{0,4}L?X{0,4}V?I{0,4}$/;
+  const romanRegexp = /^(?=[MDCLXVI])M*(C[MD]|D?C*)(X[CL]|L?X*)(I[XV]|V?I*)$/;
 
   if (typeof input !== "string" || input.length < 1) {
     throw new Error("Please provide not empty string.");
